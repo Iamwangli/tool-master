@@ -39,6 +39,8 @@ bash:cp | 复制,拷贝,备份文件 | cp source.txt dest.txt | 8
 bash:mv | 移动,重命名,改名 | mv old.txt new.txt | 8  
 bash:rm | 删除,移除,清理 | rm file.txt | 9  
 bash:touch | 创建,新建文件,空文件 | touch newfile.txt | 6  
+bash:diff | 比较,文件差异,文本比较 | diff file1.txt file2.txt | 7  
+bash:diff -u | 详细比较,统一格式差异 | diff -u file1.txt file2.txt | 7  
   
 ## 系统信息类  
   
@@ -73,6 +75,8 @@ bash:awk | 处理,分析,提取,格式化,报表 | awk '{print $1}' file.txt | 8
 bash:cut | 切割,提取列,字段提取 | cut -d',' -f1 file.csv | 7  
 bash:sort | 排序,排列,顺序 | sort file.txt | 7  
 bash:uniq | 去重,唯一值,重复项 | sort file.txt | uniq | 7  
+bash:vim | 编辑,文本编辑器,修改文件,代码编辑 | vim file.txt | 8  
+bash:vimdiff | 比较,差异对比,文件比较,可视化比较 | vimdiff file1.txt file2.txt | 7  
   
 ### 文本转换  
 bash:tr | 转换,字符替换,大小写转换 | tr 'a-z' 'A-Z' < file.txt | 6  

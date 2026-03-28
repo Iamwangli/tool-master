@@ -4,6 +4,12 @@
 ```
 工具类型:工具名称 | 关键词1,关键词2,关键词3 | 命令示例 | 优先级(1-10)
 ```
+## 优先级说明
+- 10: 最常用,最核心的工具
+- 9-8: 常用工具
+- 7-6: 一般工具
+- 5-4: 较少使用的工具
+- 3-1: 特殊用途工具
 
 ## 文件/目录操作类
 
@@ -156,6 +162,48 @@ bash:mpstat | CPU统计,处理器性能 | mpstat 1 | 6
 bash:journalctl | 系统日志,服务日志 | journalctl -u service-name | 7
 bash:dmesg | 内核日志,系统消息 | dmesg | 6
 
+## OpenClaw 工具类
+
+### 系统状态
+openclaw:status | OpenClaw状态,系统状态,健康检查,状态检查 | openclaw status | 9
+openclaw:doctor | 诊断,问题诊断,健康诊断,系统诊断 | openclaw doctor | 8
+openclaw:version | 版本,版本检查,OpenClaw版本 | openclaw --version | 7
+
+### Gateway管理
+openclaw:gateway status | Gateway状态,网关状态,服务状态 | openclaw gateway status | 8
+openclaw:gateway start | 启动Gateway,启动服务,启动网关 | openclaw gateway start | 8
+openclaw:gateway stop | 停止Gateway,停止服务,停止网关 | openclaw gateway stop | 8
+openclaw:gateway restart | 重启Gateway,重启服务,重启网关 | openclaw gateway restart | 8
+
+### 会话管理
+openclaw:sessions list | 会话列表,查看会话,活动会话 | openclaw sessions list | 7
+openclaw:sessions history | 会话历史,消息历史,聊天历史 | openclaw sessions history <sessionKey> | 6
+
+### 技能管理
+openclaw:skills list | 技能列表,查看技能,可用技能 | openclaw skills list | 7
+openclaw:skills install | 安装技能,添加技能,下载技能 | openclaw skills install <skill-name> | 7
+openclaw:skills uninstall | 卸载技能,移除技能,删除技能 | openclaw skills uninstall <skill-name> | 6
+
+### 配置管理
+openclaw:config get | 获取配置,查看配置,读取配置 | openclaw config get <key> | 7
+openclaw:config set | 设置配置,修改配置,更新配置 | openclaw config set <key> <value> | 7
+openclaw:config list | 配置列表,所有配置,查看所有配置 | openclaw config list | 6
+
+### 模型管理
+openclaw:models list | 模型列表,可用模型,查看模型 | openclaw models list | 7
+openclaw:models set | 设置模型,切换模型,更改模型 | openclaw models set <model-alias> | 7
+
+### 消息发送
+openclaw:message send | 发送消息,消息发送,通知发送 | openclaw message send --channel webchat --message "Hello" | 6
+
+### 备份恢复
+openclaw:backup create | 创建备份,备份数据,数据备份 | openclaw backup create | 6
+openclaw:backup restore | 恢复备份,数据恢复,还原备份 | openclaw backup restore <backup-file> | 6
+
+### 系统事件
+openclaw:system heartbeat | 心跳,系统心跳,保持活动 | openclaw system heartbeat | 5
+openclaw:system wake | 唤醒,系统唤醒,发送唤醒事件 | openclaw system wake "任务提醒" | 5
+
 ## 其他实用工具
 
 ### 计算器
@@ -170,10 +218,3 @@ bash:sha256sum | SHA256校验,安全哈希 | sha256sum file.txt | 6
 ### 时间相关
 bash:sleep | 等待,暂停,延时 | sleep 5 | 5
 bash:time | 计时,执行时间,性能测试 | time command | 6
-
-## 优先级说明
-- 10: 最常用,最核心的工具
-- 9-8: 常用工具
-- 7-6: 一般工具
-- 5-4: 较少使用的工具
-- 3-1: 特殊用途工具

@@ -113,11 +113,15 @@ bash:git status | Git状态,版本状态,变更状态 | git status | 8
 bash:git log | 提交历史,版本历史,变更记录 | git log --oneline | 7  
 bash:git diff | 差异,比较,变更内容 | git diff HEAD~1 | 7  
 bash:git log --graph | 图形化分支,分支图,可视化历史 | git log --oneline --graph --all | 8  
-bash:git remote set-url | 修改远程地址,切换SSH,免密码 | git remote set-url origin git@github.com:user/repo.git | 8  
+bash:git diff HEAD~1 | 比较提交,查看变更,两次提交差异 | git diff HEAD~1 HEAD -- filename | 8  
+bash:git difftool --tool=vimdiff | 图形化比较,并排显示,vimdiff差异 | git difftool --tool=vimdiff HEAD~1 HEAD -- file | 7  
+bash:vimdiff <(git show) | 进程替换比较,灵活版本对比 | vimdiff <(git show HEAD~1:file) <(git show HEAD:file) | 7  
+bash:gvimdiff | 图形对比,可视化差异,gvim比较 | gvimdiff file1 file2 | 6  
+bash:git remote add | 首次关联远程,添加origin,新建远程 | git remote add origin git@github.com:user/repo.git | 8  
+bash:git remote set-url | 修改远程地址,切换SSH,已有远程改URL | git remote set-url origin git@github.com:user/repo.git | 8  
 bash:ssh-keygen | 生成SSH密钥,免密登录 | ssh-keygen -t ed25519 -C "email@example.com" | 8  
 bash:git config | 配置用户名邮箱,全局设置 | git config --global user.name "Your Name" | 8  
 bash:git init | 初始化仓库,创建git | git init | 8  
-bash:git remote add | 关联远程仓库,添加origin | git remote add origin git@github.com:user/repo.git | 8  
 bash:git add | 添加,暂存,准备提交 | git add file.txt | 8  
 bash:git commit | 提交,保存变更,版本提交 | git commit -m "message" | 8  
 bash:git push | 推送,上传,同步远程 | git push origin main | 8  

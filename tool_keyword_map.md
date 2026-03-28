@@ -17,6 +17,7 @@
 bash:tree | 目录,目录结构,树形结构,文件夹结构 | tree -a | 8  
 bash:ls | 列表,文件列表,查看文件,目录内容 | ls -la | 9  
 bash:find | 查找,搜索文件,定位文件,文件查找 | find . -name "*.py" | 8  
+rust:exa | 增强ls,文件列表,现代ls | exa -la | 8  
   
 ### 文件信息统计  
 bash:wc | 统计,行数,字数,字符数,文件大小 | wc -l file.txt | 7  
@@ -28,11 +29,14 @@ bash:cat | 查看,显示,文件内容,全文 | cat file.txt | 7
 bash:head | 头部,前几行,开头 | head -20 file.txt | 6  
 bash:tail | 尾部,后几行,结尾,日志 | tail -f log.txt | 7  
 bash:less | 浏览,分页查看,大文件 | less large_file.txt | 6  
+rust:bat | 代码查看,语法高亮,cat替代 | bat file.rs | 8  
   
 ### 文件搜索  
 bash:grep | 搜索,查找文本,匹配,模式 | grep "error" log.txt | 9  
 bash:ack | 代码搜索,快速搜索,ack搜索 | ack "function" | 7  
 bash:rg | 快速搜索,ripgrep,高性能搜索 | rg "pattern" | 8  
+rust:ripgrep (rg) | 快速搜索,代码搜索,高性能搜索 | rg "pattern" | 9  
+rust:fd-find (fd) | 文件查找,替代find,快速查找 | fd "*.rs" | 8  
   
 ### 文件操作  
 bash:cp | 复制,拷贝,备份文件 | cp source.txt dest.txt | 8  
@@ -112,6 +116,18 @@ bash:git add | 添加,暂存,准备提交 | git add file.txt | 8
 bash:git commit | 提交,保存变更,版本提交 | git commit -m "message" | 8  
 bash:git push | 推送,上传,同步远程 | git push origin main | 8  
 bash:git pull | 拉取,更新,获取最新 | git pull origin main | 8  
+  
+### Rust 开发  
+rust:cargo build | Rust编译,构建项目,编译Rust | ~/.cargo/bin/cargo build | 8  
+rust:cargo run | 运行Rust程序,执行项目 | ~/.cargo/bin/cargo run | 8  
+rust:cargo test | Rust测试,单元测试 | ~/.cargo/bin/cargo test | 7  
+rust:cargo check | 快速检查,语法检查 | ~/.cargo/bin/cargo check | 7  
+rust:cargo clippy | Rust代码检查,静态分析 | ~/.cargo/bin/cargo clippy | 7  
+rust:cargo fmt | Rust代码格式化 | ~/.cargo/bin/cargo fmt | 6  
+rust:cargo new | 创建Rust项目,新建项目 | ~/.cargo/bin/cargo new project_name | 8  
+rust:cargo add | 添加Rust依赖,安装库 | ~/.cargo/bin/cargo add serde | 8  
+rust:cargo update | 更新Rust依赖 | ~/.cargo/bin/cargo update | 7  
+rust:cargo doc | 生成Rust文档 | ~/.cargo/bin/cargo doc --open | 6  
   
 ### 代码分析  
 bash:flake8 | Python检查,代码规范,语法检查 | flake8 myfile.py | 7  

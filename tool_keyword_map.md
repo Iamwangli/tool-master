@@ -112,6 +112,7 @@ python:进程管理 | 子进程,执行命令,系统调用 | python3 -c "import s
 bash:git status | Git状态,版本状态,变更状态 | git status | 8  
 bash:git log | 提交历史,版本历史,变更记录 | git log --oneline | 7  
 bash:git diff | 差异,比较,变更内容 | git diff HEAD~1 | 7  
+bash:git log --graph | 图形化分支,分支图,可视化历史 | git log --oneline --graph --all | 8  
 bash:git add | 添加,暂存,准备提交 | git add file.txt | 8  
 bash:git commit | 提交,保存变更,版本提交 | git commit -m "message" | 8  
 bash:git push | 推送,上传,同步远程 | git push origin main | 8  

@@ -115,6 +115,9 @@ bash:git diff | 差异,比较,变更内容 | git diff HEAD~1 | 7
 bash:git log --graph | 图形化分支,分支图,可视化历史 | git log --oneline --graph --all | 8  
 bash:git remote set-url | 修改远程地址,切换SSH,免密码 | git remote set-url origin git@github.com:user/repo.git | 8  
 bash:ssh-keygen | 生成SSH密钥,免密登录 | ssh-keygen -t ed25519 -C "email@example.com" | 8  
+bash:git config | 配置用户名邮箱,全局设置 | git config --global user.name "Your Name" | 8  
+bash:git init | 初始化仓库,创建git | git init | 8  
+bash:git remote add | 关联远程仓库,添加origin | git remote add origin git@github.com:user/repo.git | 8  
 bash:git add | 添加,暂存,准备提交 | git add file.txt | 8  
 bash:git commit | 提交,保存变更,版本提交 | git commit -m "message" | 8  
 bash:git push | 推送,上传,同步远程 | git push origin main | 8  

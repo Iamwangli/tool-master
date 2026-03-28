@@ -128,6 +128,13 @@ rust:cargo new | 创建Rust项目,新建项目 | ~/.cargo/bin/cargo new project_
 rust:cargo add | 添加Rust依赖,安装库 | ~/.cargo/bin/cargo add serde | 8  
 rust:cargo update | 更新Rust依赖 | ~/.cargo/bin/cargo update | 7  
 rust:cargo doc | 生成Rust文档 | ~/.cargo/bin/cargo doc --open | 6  
+rust:cargo search | 搜索Rust库,查找第三方库 | ~/.cargo/bin/cargo search "http client" | 7  
+rust:cargo info | 查看库信息,依赖详情 | ~/.cargo/bin/cargo info serde | 7  
+rust:cargo add | 添加Rust依赖,安装库 | ~/.cargo/bin/cargo add serde | 8  
+rust:cargo tree | 查看依赖树,依赖关系 | ~/.cargo/bin/cargo tree | 6  
+rust:cargo new --bin | 创建二进制项目,可执行程序 | ~/.cargo/bin/cargo new project-name --bin | 8  
+rust:cargo new --lib | 创建库项目,Rust库 | ~/.cargo/bin/cargo new project-name --lib | 8  
+rust:cargo workspace | 创建工作区,多项目管理 | 创建Cargo.toml定义[workspace] | 7  
   
 ### 代码分析  
 bash:flake8 | Python检查,代码规范,语法检查 | flake8 myfile.py | 7  
